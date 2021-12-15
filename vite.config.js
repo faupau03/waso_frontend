@@ -13,7 +13,9 @@ export default defineConfig({
         name: 'Wastel Software ',
         short_name: 'WaSo',
         description: 'Software for the Wastel game',
-        theme_color: '#ffffff',
+        theme_color: '#222428',
+        background_color: '#222428',
+        display: "standalone",
         icons: [
           {
             src: 'pwa-192x192.png',
