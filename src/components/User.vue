@@ -1,13 +1,3 @@
-<script setup>
-  function closeSelect() {
-      if (this.selectVisible) {
-        this.selectVisible = false;
-      }
-      console.log("Hello");
-  }
-</script>
-
-
 <template>
   <div id="filter" class="flex justify-evenly items-center h-16 text-violet-400">
     <div id="search" class="w-1/3">
