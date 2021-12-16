@@ -7,8 +7,10 @@
     "preview": "vite preview --host"
   },
   "dependencies": {
+    "bootstrap-icons-vue": "^0.8.0",
     "vue": "^3.2.23",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vue3-click-away": "^1.2.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.10.2",
