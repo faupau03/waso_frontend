@@ -2,9 +2,9 @@ import {
     createRouter,
     createWebHistory
 } from 'vue-router'
-import Home from '/src/components/Home.vue'
-import User from '/src/components/User.vue'
-import Game from '/src/components/Game.vue'
+import Home from '/src/components/Home/Main.vue'
+import User from '/src/components/User/Main.vue'
+import Game from '/src/components/Game/Main.vue'
 
 const routes = [
     {
