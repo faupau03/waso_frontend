@@ -25,6 +25,7 @@
       </div>
       <div id="sort" class="w-1/3">
         <select
+          @change="this.$parent.sortBy(sort);"
           v-model="sort"
           class="
             rounded-full

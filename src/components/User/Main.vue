@@ -168,6 +168,7 @@ export default {
                 // set the response data
                 this.data = json;
                 this.search_data = this.data;
+                this.sortBy();
             }
             catch (err) {
                 this.error.value = err;
@@ -205,14 +206,19 @@ export default {
           console.log("Is data an array: " + Array.isArray(this.data));
           if (val.length < 1) {
             this.search_data = this.data;
+            this.sortBy();
           }
           else {
             //this.search_data = this.data.filter(el => el.name.toLowerCase().includes(val.toLowerCase()));
             this.search_data = this.data.filter(this.hasName);
             console.log("found: " + this.search_data);
+            this.sortBy();
           }
         },
-        sortBy() {
+        sortBy(sort) {
+          if (sort) {
+            this.sort = sort;
+          }
           if (this.sort === "updated_up") {
             //This is not implemented yet
             
@@ -223,6 +229,26 @@ export default {
                 return c-d;
             });
             */
+          }
+          else if (this.sort === "updated_down") {
+            // This is not implemented yet
+          }
+          else if (this.sort  == "created_up") {
+            this.search_data.sort(function(a, b) {
+                var c = new Date(a.created);
+                var d = new Date(b.created);
+                return c-d;
+            });
+          }
+          else if (this.sort == "created_down") {
+            this.search_data.sort(function(a, b) {
+                var c = new Date(a.created);
+                var d = new Date(b.created);
+                return d-c;
+            });
+          }
+          else {
+            // Nothing
           }
         },
     },
