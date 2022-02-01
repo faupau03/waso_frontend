@@ -46,7 +46,7 @@
         </select>
       </div>
 
-      <div id="options">
+      <div id="options" class="relative">
         <button
           @click="selectVisible = !selectVisible"
           class="
@@ -80,6 +80,9 @@
             p-1
             pl-2
             rounded-xl
+            z-20
+            top-[35px]
+            left-[-50px]
           "
         >
           <div>
