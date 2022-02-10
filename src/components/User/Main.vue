@@ -153,6 +153,7 @@ export default {
             try {
                 const res = await fetch("https://waso-backend.paffnet.de/api/v1/user", {
                     method: "get",
+                    credentials: "include",
                     headers: {
                         "content-type": "application/json",
                     },
