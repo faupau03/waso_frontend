@@ -127,8 +127,6 @@ import { ref, computed } from "vue";
 import UserFilter from "./UserFilter.vue";
 import AddGuest from "./AddGuest.vue";
 import View from "./View.vue";
-import { t } from "../../../dist/assets/vendor.88830552";
-import { e } from "../../../dist/assets/vendor.88830552";
 
 export default {
   components: {
