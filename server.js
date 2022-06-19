@@ -9,25 +9,13 @@ app.set("trust proxy", "172.18.0.10");
 
 app.use(express.static('dist'));
 
-app.get('/favorites', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + '/dist/index.html')
 })
-app.get('/search', (req, res) => {
+app.get('/user', (req, res) => {
     res.sendFile(__dirname + '/dist/index.html')
 })
-app.get('/leagues', (req, res) => {
-    res.sendFile(__dirname + '/dist/index.html')
-})
-app.get('/team', (req, res) => {
-    res.sendFile(__dirname + '/dist/index.html')
-})
-app.get('/match', (req, res) => {
-    res.sendFile(__dirname + '/dist/index.html')
-})
-app.get('/club', (req, res) => {
-    res.sendFile(__dirname + '/dist/index.html')
-})
-app.get('/gym', (req, res) => {
+app.get('/game', (req, res) => {
     res.sendFile(__dirname + '/dist/index.html')
 })
 
