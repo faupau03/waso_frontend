@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview --host"
+    "preview": "vite preview --host",
+    "serve": "node server.js"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.4.0",
