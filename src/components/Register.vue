@@ -96,9 +96,43 @@ export default {
             router.push("/#login");
         },
         register() {
-            //TODO: Register
-            
-            console.log("Register");
+            //login
+            console.log("registration");
+            // Post fetch to backend with credentials from registration-form
+            // If successful, redirect to dashboard
+            // If not, show error message
+            this.loading = true;
+            return fetch("https://waso-backend.paffnet.de/api/v1/user", {
+                method: "post",
+                credentials: "include",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify({
+                    username: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    password: document.getElementById("password").value,
+                }),
+            })
+                .then((res) => {
+                    if (!res.ok) {
+                        this.error = new Error(res.statusText);
+                        this.error.json = res.json();
+                        throw this.error;
+                    }
+                    return res.json();
+                })
+                .then((json) => {
+                    this.user = json;
+                })
+                .catch((err) => {
+                    this.error = err;
+                    this.loading = false;
+                })
+                .finally(() => {
+                    this.loading = false;
+                    this.$parent.authorized = true;
+                });
         },
         fetchGuests() {
         },
