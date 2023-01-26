@@ -5,6 +5,8 @@ import {
 import Home from '/src/components/Home/Main.vue'
 import User from '/src/components/User/Main.vue'
 import Game from '/src/components/Game/Main.vue'
+import Login from '/src/components/Login.vue'
+import Register from '/src/components/Register.vue'
 
 const routes = [
     {
@@ -21,7 +23,19 @@ const routes = [
         path: '/game',
         name: 'Game',
         component: Game,
-    }, 
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: Login,
+    },
+    {
+        path: '/register',
+        name: 'register',
+        component: Register,
+    },
+
+
 ]
 const router = createRouter({
     history: createWebHistory(),
